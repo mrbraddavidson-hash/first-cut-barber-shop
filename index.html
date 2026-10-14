@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Cut Barber Shop | 130 Inkerman St W, Listowel, ON</title>
+  <meta name="description" content="Listowel's authentic traditional barbershop on Inkerman St West. Master Barber Rick. Classic cuts, beard trims, seniors & kids cuts. Walk-ins always welcome!">
+
+  <!-- Favicon / Meta -->
+  <link rel="icon" type="image/jpeg" href="assets/logo_banner.jpg">
+
+  <!-- Tailwind CSS via Google CDN -->
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+
+  <style>
+    /* Exact Palette from Storefront Sign */
+    :root {
+      --fc-navy: #162544;
+      --fc-navy-dark: #0c1527;
+      --fc-navy-deep: #080e1a;
+      --fc-red: #B22222;
+      --fc-red-dark: #8b1818;
+      --fc-red-bright: #dc2626;
+      --fc-white: #ffffff;
+      --fc-slate: #2B3240;
+    }
+
+    /* Concept 5: Signature Classic Barber Pole Ribbons (Static) */
+    .barber-pole-ribbon-lg {
+      background: repeating-linear-gradient(
+        -45deg,
+        #162544,
+        #162544 18px,
+        #ffffff 18px,
+        #ffffff 28px,
+        #B22222 28px,
+        #B22222 46px,
+        #ffffff 46px,
+        #ffffff 56px
+      );
+    }
+
+    .barber-pole-ribbon-md {
+      background: repeating-linear-gradient(
+        -45deg,
+        #162544,
+        #162544 12px,
+        #ffffff 12px,
+        #ffffff 18px,
+        #B22222 18px,
+        #B22222 30px,
+        #ffffff 30px,
+        #ffffff 36px
+      );
+    }
+
+    .barber-pole-ribbon-sm {
+      background: repeating-linear-gradient(
+        -45deg,
+        #162544,
+        #162544 7px,
+        #ffffff 7px,
+        #ffffff 11px,
+        #B22222 11px,
+        #B22222 18px,
+        #ffffff 18px,
+        #ffffff 22px
+      );
+    }
+
+    .barber-pole-vertical {
+      background: repeating-linear-gradient(
+        -45deg,
+        #162544,
+        #162544 14px,
+        #ffffff 14px,
+        #ffffff 20px,
+        #B22222 20px,
+        #B22222 34px,
+        #ffffff 34px,
+        #ffffff 40px
+      );
+    }
+
+    /* Custom Selection and Scrollbar */
+    ::selection { background: #B22222; color: #ffffff; }
+    ::-webkit-scrollbar { width: 9px; }
+    ::-webkit-scrollbar-track { background: #0c1527; }
+    ::-webkit-scrollbar-thumb { background: #162544; border: 1px solid #B22222; border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: #B22222; }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- TOP STATIC BARBER STRIPE ACCENT -->
+  <div class="h-2.5 barber-pole-ribbon-lg w-full sticky top-0 z-50"></div>
+
+  <!-- CLEAN STREAMLINED MAIN HEADER -->
+  <header class="bg-[#162544] text-white shadow-xl sticky top-2.5 z-40 border-b-2 border-[#B22222]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Identity -->
+      <a href="#" class="flex items-center space-x-3.5 group">
+        <div class="w-10 h-10 rounded-lg overflow-hidden border border-white/30 shadow-md flex-shrink-0 bg-white p-0.5">
+          <img src="assets/logo_banner.jpg" class="w-full h-full object-cover group-hover:scale-105 transition" alt="First Cut Barber Shop">
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="text-xl sm:text-2xl font-black tracking-wider uppercase font-serif text-white">FIRST CUT</span>
+            <span class="text-[10px] bg-[#B22222] text-white font-sans font-bold px-2 py-0.5 rounded tracking-widest uppercase shadow">BARBERSHOP</span>
+          </div>
+          <p class="text-xs text-slate-300">130 Inkerman St W • Listowel, ON</p>
+        </div>
+      </a>
+
+      <!-- Streamlined Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-bold text-slate-200">
+        <a href="#services" class="hover:text-white transition">Services & Rates</a>
+        <a href="#schedule" class="hover:text-white transition">Hours</a>
+        <a href="#location" class="hover:text-white transition">Location</a>
+      </nav>
+
+      <!-- Live Status & Call Action -->
+      <div class="flex items-center space-x-4">
+        <!-- Live Status Pill -->
+        <div class="hidden lg:flex items-center space-x-2 bg-[#0c1527] px-3.5 py-1.5 rounded-full border border-slate-700 text-xs">
+          <span id="status-pulse-dot" class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span id="status-live-text" class="font-bold text-emerald-400">Open Now • Walk-Ins Welcome</span>
+        </div>
+
+        <!-- Single Primary Call Button -->
+        <a href="tel:5195809713" class="bg-[#B22222] hover:bg-[#8b1818] text-white font-black px-4 sm:px-5 py-2.5 rounded-xl shadow-lg transition text-sm flex items-center gap-2">
+          <span>📞 (519) 580-9713</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-[#162544] text-white py-14 lg:py-20 overflow-hidden">
+    <!-- Decorative Diagonal Barber Stripes Accent Frame -->
+    <div class="absolute inset-x-0 top-0 h-2 barber-pole-ribbon-sm opacity-90"></div>
+    <div class="absolute inset-x-0 bottom-0 h-2 barber-pole-ribbon-sm opacity-90"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-[#B22222] text-white font-black text-xs px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
+            <span>💈 TRADITIONAL BARBERSHOP</span>
+            <span>•</span>
+            <span>NO APPOINTMENTS EVER</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight sm:leading-none text-white">
+            Listowel's Classic <br>
+            <span class="text-white underline decoration-[#B22222] decoration-4">Walk-In Barber.</span> <br>
+            Fast, Sharp, Inexpensive.
+          </h1>
+
+          <p class="text-lg text-slate-200 leading-relaxed max-w-xl">
+            Pull up a chair at <strong>130 Inkerman St West</strong>. Operated by Rick, offering traditional clipper and scissor cuts, fades, beard maintenance, and friendly haircuts for men, boys, and seniors.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="tel:5195809713" class="bg-[#B22222] hover:bg-[#8b1818] text-white font-black px-7 py-4 rounded-xl shadow-xl transition flex items-center gap-2 text-base border-2 border-red-400/30">
+              <span>📞 Call Shop: (519) 580-9713</span>
+            </a>
+            <a href="#services" class="bg-white hover:bg-slate-100 text-[#162544] font-black px-7 py-4 rounded-xl shadow-xl transition flex items-center gap-2 text-base border-2 border-white">
+              <span>View Rates & Menu ↓</span>
+            </a>
+          </div>
+
+          <!-- Quick Highlights -->
+          <div class="grid grid-cols-3 gap-3 pt-4 border-t border-white/15 max-w-lg">
+            <div class="bg-white/10 p-3 rounded-xl border border-white/15 text-center">
+              <span class="font-black text-white text-xl block">$24</span>
+              <span class="text-xs text-slate-300 font-semibold uppercase">Men's Cut</span>
+            </div>
+            <div class="bg-white/10 p-3 rounded-xl border border-white/15 text-center">
+              <span class="font-black text-white text-xl block">15-20m</span>
+              <span class="text-xs text-slate-300 font-semibold uppercase">In & Out</span>
+            </div>
+            <div class="bg-white/10 p-3 rounded-xl border border-white/15 text-center">
+              <span class="font-black text-emerald-400 text-xl block">Walk-In</span>
+              <span class="text-xs text-slate-300 font-semibold uppercase">Always</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Real Storefront Photo with Barber Pole Border -->
+        <div class="lg:col-span-5">
+          <div class="relative p-2.5 rounded-3xl bg-[#B22222] shadow-2xl">
+            <div class="rounded-2xl overflow-hidden bg-[#0c1527] border-4 border-white relative group">
+              <img src="assets/storefront.jpg" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition duration-500" alt="First Cut Barber Shop Storefront">
+              
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0c1527] via-[#0c1527]/85 to-transparent p-5 text-white">
+                <span class="bg-[#B22222] text-white font-black text-xs px-2.5 py-0.5 rounded uppercase tracking-wider">
+                  Downtown Listowel
+                </span>
+                <p class="font-black text-base text-white mt-1">130 Inkerman St West</p>
+                <p class="text-xs text-slate-300">Across from RBC Royal Bank • Near Market Square</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MID-PAGE BARBER STRIPE ACCENT -->
+  <div class="h-3 barber-pole-ribbon-md w-full shadow-inner"></div>
+
+  <!-- SERVICES & RATES (PRICING TARIFF) -->
+  <section id="services" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <div class="inline-flex items-center gap-2 bg-[#B22222] text-white font-black text-xs px-4 py-1.5 rounded-full uppercase tracking-wider shadow">
+          <span>💈 HONEST SMALL-TOWN PRICING</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-[#162544] tracking-tight">
+          Barber Services & Standard Menu
+        </h2>
+        <p class="text-base text-slate-600">
+          Clean, no-frills pricing. Cash & local payment accepted. Drop in whenever your hair needs tidying.
+        </p>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1: Men's Cut -->
+        <div class="rounded-2xl border-2 border-slate-200 hover:border-[#162544] p-6 shadow-sm hover:shadow-2xl transition bg-white flex flex-col justify-between group relative overflow-hidden">
+          <div class="h-2 barber-pole-ribbon-sm absolute top-0 inset-x-0"></div>
+          <div class="space-y-4 pt-2">
+            <div class="flex justify-between items-start">
+              <span class="text-3xl">💈</span>
+              <span class="bg-[#162544] text-white font-black text-2xl px-4 py-1.5 rounded-xl border-2 border-[#B22222] shadow">$24</span>
+            </div>
+            <h3 class="text-2xl font-black text-[#162544] group-hover:text-[#B22222] transition">
+              Men's Regular Haircut
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Precision clipper and scissor cut, taper or fade, eyebrow/ear tidy upon request, finished with a clean razor neck shave line.
+            </p>
+          </div>
+          <div class="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
+            <span class="text-slate-500">⏱️ Approx 15–20 Mins</span>
+            <span class="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">Walk-In Ready</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Seniors Cut -->
+        <div class="rounded-2xl border-2 border-slate-200 hover:border-[#162544] p-6 shadow-sm hover:shadow-2xl transition bg-white flex flex-col justify-between group relative overflow-hidden">
+          <div class="h-2 barber-pole-ribbon-sm absolute top-0 inset-x-0"></div>
+          <div class="space-y-4 pt-2">
+            <div class="flex justify-between items-start">
+              <span class="text-3xl">👴</span>
+              <span class="bg-[#162544] text-white font-black text-2xl px-4 py-1.5 rounded-xl border-2 border-[#B22222] shadow">$20</span>
+            </div>
+            <h3 class="text-2xl font-black text-[#162544] group-hover:text-[#B22222] transition">
+              Seniors Cut (65+)
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Traditional gentlemen's scissor trim, tidy sideburns, collar lineup, and eyebrow/ear maintenance.
+            </p>
+          </div>
+          <div class="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
+            <span class="text-slate-500">⏱️ Approx 15 Mins</span>
+            <span class="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">Walk-In Ready</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Kids Cut -->
+        <div class="rounded-2xl border-2 border-slate-200 hover:border-[#162544] p-6 shadow-sm hover:shadow-2xl transition bg-white flex flex-col justify-between group relative overflow-hidden">
+          <div class="h-2 barber-pole-ribbon-sm absolute top-0 inset-x-0"></div>
+          <div class="space-y-4 pt-2">
+            <div class="flex justify-between items-start">
+              <span class="text-3xl">👦</span>
+              <span class="bg-[#162544] text-white font-black text-2xl px-4 py-1.5 rounded-xl border-2 border-[#B22222] shadow">$18</span>
+            </div>
+            <h3 class="text-2xl font-black text-[#162544] group-hover:text-[#B22222] transition">
+              Boys & Youth (Under 12)
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Patient, fast, and friendly school haircuts, sports cuts, or first trims. Parents love the hassle-free walk-in speed.
+            </p>
+          </div>
+          <div class="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
+            <span class="text-slate-500">⏱️ Approx 15 Mins</span>
+            <span class="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">Walk-In Ready</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Beard Trim & Shaping -->
+        <div class="rounded-2xl border-2 border-slate-200 hover:border-[#162544] p-6 shadow-sm hover:shadow-2xl transition bg-white flex flex-col justify-between group relative overflow-hidden">
+          <div class="h-2 barber-pole-ribbon-sm absolute top-0 inset-x-0"></div>
+          <div class="space-y-4 pt-2">
+            <div class="flex justify-between items-start">
+              <span class="text-3xl">🧔</span>
+              <span class="bg-[#162544] text-white font-black text-2xl px-4 py-1.5 rounded-xl border-2 border-[#B22222] shadow">$12 - $15</span>
+            </div>
+            <h3 class="text-2xl font-black text-[#162544] group-hover:text-[#B22222] transition">
+              Beard Trim & Edge Up
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Length debulking, jawline shaping, mustache trim, and crisp cheek and neckline perimeter cleanup.
+            </p>
+          </div>
+          <div class="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
+            <span class="text-slate-500">⏱️ Approx 10 Mins</span>
+            <span class="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">Walk-In Ready</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Buzz Cut -->
+        <div class="rounded-2xl border-2 border-slate-200 hover:border-[#162544] p-6 shadow-sm hover:shadow-2xl transition bg-white flex flex-col justify-between group relative overflow-hidden">
+          <div class="h-2 barber-pole-ribbon-sm absolute top-0 inset-x-0"></div>
+          <div class="space-y-4 pt-2">
+            <div class="flex justify-between items-start">
+              <span class="text-3xl">⚡</span>
+              <span class="bg-[#162544] text-white font-black text-2xl px-4 py-1.5 rounded-xl border-2 border-[#B22222] shadow">$16</span>
+            </div>
+            <h3 class="text-2xl font-black text-[#162544] group-hover:text-[#B22222] transition">
+              Uniform Buzz Cut
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Single or double-guard uniform buzz across the head with tapered perimeter and neck shave.
+            </p>
+          </div>
+          <div class="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
+            <span class="text-slate-500">⏱️ Approx 10 Mins</span>
+            <span class="text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">Walk-In Ready</span>
+          </div>
+        </div>
+
+        <!-- Card 6: Haircut & Beard Combo -->
+        <div class="rounded-2xl border-2 border-[#B22222] p-6 shadow-lg bg-[#162544] text-white flex flex-col justify-between group relative overflow-hidden">
+          <div class="h-2 barber-pole-ribbon-sm absolute top-0 inset-x-0"></div>
+          <div class="space-y-4 pt-2">
+            <div class="flex justify-between items-start">
+              <span class="text-3xl">👑</span>
+              <span class="bg-[#B22222] text-white font-black text-2xl px-4 py-1.5 rounded-xl shadow">$34</span>
+            </div>
+            <h3 class="text-2xl font-black text-white group-hover:text-red-300 transition">
+              Haircut & Beard Combo
+            </h3>
+            <p class="text-sm text-slate-200 leading-relaxed">
+              Full haircut plus comprehensive beard sculpting and edge-up. Walk in looking shaggy, leave looking sharp.
+            </p>
+          </div>
+          <div class="pt-4 mt-6 border-t border-white/10 flex items-center justify-between text-xs font-bold">
+            <span class="text-slate-300">⏱️ Approx 25 Mins</span>
+            <span class="bg-[#B22222] text-white px-2.5 py-1 rounded-md uppercase font-black">Best Value</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MID-PAGE BARBER STRIPE ACCENT -->
+  <div class="h-3 barber-pole-ribbon-md w-full shadow-inner"></div>
+
+  <!-- SHOP SCHEDULE & LIVE TIME TRACKER -->
+  <section id="schedule" class="py-16 lg:py-24 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Hours Card -->
+        <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border-2 border-slate-300 shadow-xl space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b-2 border-slate-200 pb-4">
+            <div>
+              <span class="text-xs font-bold text-[#B22222] uppercase tracking-widest">Storefront Verified Hours</span>
+              <h2 class="text-3xl font-black text-[#162544]">Weekly Hours of Operation</h2>
+            </div>
+            <span class="text-xs bg-[#162544] text-white font-black px-3 py-1.5 rounded-lg uppercase border border-[#B22222]">
+              130 Inkerman St W
+            </span>
+          </div>
+
+          <table class="w-full text-sm sm:text-base">
+            <tbody class="divide-y divide-slate-100">
+              <tr id="sched-mon" class="transition"><td class="py-3.5 font-bold text-slate-400">Monday</td><td class="py-3.5 text-right font-black text-red-600">CLOSED</td></tr>
+              <tr id="sched-tue" class="transition"><td class="py-3.5 font-bold text-slate-800">Tuesday</td><td class="py-3.5 text-right font-black text-[#162544]">9:00 AM – 5:00 PM</td></tr>
+              <tr id="sched-wed" class="transition"><td class="py-3.5 font-bold text-slate-800">Wednesday</td><td class="py-3.5 text-right font-black text-[#162544]">9:00 AM – 5:00 PM</td></tr>
+              <tr id="sched-thu" class="transition"><td class="py-3.5 font-bold text-slate-800">Thursday</td><td class="py-3.5 text-right font-black text-[#162544]">9:00 AM – 5:00 PM</td></tr>
+              <tr id="sched-fri" class="transition"><td class="py-3.5 font-bold text-slate-800">Friday</td><td class="py-3.5 text-right font-black text-[#162544]">9:00 AM – 5:00 PM</td></tr>
+              <tr id="sched-sat" class="transition"><td class="py-3.5 font-bold text-slate-800">Saturday</td><td class="py-3.5 text-right font-black text-[#B22222]">9:00 AM – 1:00 PM</td></tr>
+              <tr id="sched-sun" class="transition"><td class="py-3.5 font-bold text-slate-400">Sunday</td><td class="py-3.5 text-right font-black text-red-600">CLOSED</td></tr>
+            </tbody>
+          </table>
+
+          <div class="bg-red-50 p-4 rounded-xl border border-red-200 text-xs text-red-900 flex items-center gap-3">
+            <span class="text-2xl">💡</span>
+            <span><strong>Walk-In Tip:</strong> Saturday mornings (9am-11am) are often lively. Feel free to call <a href="tel:5195809713" class="font-bold underline text-[#162544]">(519) 580-9713</a> before you drive into town!</span>
+          </div>
+        </div>
+
+        <!-- Schedule Right Banner / Humour Sign -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-[#162544] text-white p-8 rounded-3xl border-4 border-[#B22222] shadow-2xl space-y-5">
+            <span class="text-xs font-mono uppercase tracking-widest text-red-300">Storefront Motto</span>
+            <div class="bg-white/10 p-5 rounded-2xl border border-white/20">
+              <span class="text-3xl block mb-2">🐾</span>
+              <h3 class="text-2xl font-black text-white uppercase tracking-wider">
+                "DOGS WELCOME. PEOPLE TOLERATED."
+              </h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Featured right on the entrance door. First Cut is a down-to-earth barbershop where good humor and genuine craft meet.
+              </p>
+            </div>
+
+            <div class="space-y-3 pt-2 text-sm">
+              <p class="flex items-center gap-2 text-slate-200">
+                <span class="text-red-400">✓</span> Single-chair personal attention by Rick
+              </p>
+              <p class="flex items-center gap-2 text-slate-200">
+                <span class="text-red-400">✓</span> Fast 15–20 minute turnaround
+              </p>
+              <p class="flex items-center gap-2 text-slate-200">
+                <span class="text-red-400">✓</span> Friendly local North Perth conversation
+              </p>
+            </div>
+
+            <div class="pt-4">
+              <a href="tel:5195809713" class="w-full bg-[#B22222] hover:bg-[#8b1818] text-white font-black py-3.5 rounded-xl shadow-lg transition text-center block text-sm">
+                📞 Call Rick: (519) 580-9713
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MID-PAGE BARBER STRIPE ACCENT -->
+  <div class="h-3 barber-pole-ribbon-md w-full shadow-inner"></div>
+
+  <!-- ABOUT & PHILOSOPHY -->
+  <section id="about" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-[#B22222]/10 text-[#B22222] font-black text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+            💈 Meet Your Barber
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-[#162544] tracking-tight leading-tight">
+            Traditional Barbering For North Perth.
+          </h2>
+          <p class="text-base text-slate-600 leading-relaxed">
+            First Cut Barber Shop was established to give Listowel a genuine, reliable, and unpretentious place to get a good haircut. Rick believes you shouldn’t need an app, an email confirmation, or weeks of advance notice just to get your neck cleaned up or your beard trimmed.
+          </p>
+          <p class="text-base text-slate-600 leading-relaxed">
+            Walk into 130 Inkerman St West, take a seat, catch up on local news, and leave feeling fresh in twenty minutes.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+              <span class="text-xl block mb-1">✂️</span>
+              <h4 class="font-bold text-sm text-[#162544]">Master Craft</h4>
+              <p class="text-xs text-slate-500 mt-1">Decades of clipper, scissor, and razor experience.</p>
+            </div>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+              <span class="text-xl block mb-1">🤝</span>
+              <h4 class="font-bold text-sm text-[#162544]">Community First</h4>
+              <p class="text-xs text-slate-500 mt-1">Proud supporter of Listowel and North Perth families.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Visual -->
+        <div class="lg:col-span-6">
+          <div class="bg-[#162544] p-8 rounded-3xl border-4 border-[#162544] shadow-xl text-white space-y-6 relative overflow-hidden">
+            <div class="h-2 barber-pole-ribbon-sm absolute top-0 inset-x-0"></div>
+            <h3 class="text-2xl font-black text-white">Why Listowel Prefers First Cut:</h3>
+            <ul class="space-y-4 text-sm">
+              <li class="flex items-start gap-3">
+                <span class="text-red-400 font-black text-lg">01.</span>
+                <div>
+                  <strong class="text-white block font-bold">100% Walk-In Friendly</strong>
+                  <span class="text-slate-300 text-xs">No rigid booking software. Come by on your lunch break or weekend morning.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-400 font-black text-lg">02.</span>
+                <div>
+                  <strong class="text-white block font-bold">Consistent Results</strong>
+                  <span class="text-slate-300 text-xs">You always get Rick—not a rotating chair of trainees or apprentices.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-400 font-black text-lg">03.</span>
+                <div>
+                  <strong class="text-white block font-bold">Honest Small-Town Rates</strong>
+                  <span class="text-slate-300 text-xs">$24 for men, $20 for seniors, $18 for kids. Kept fair for everyday families.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MID-PAGE BARBER STRIPE ACCENT -->
+  <div class="h-3 barber-pole-ribbon-md w-full shadow-inner"></div>
+
+  <!-- LOCATION, DIRECTIONS & MAP -->
+  <section id="location" class="py-16 lg:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Location details -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-[#B22222] text-white font-black text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+            📍 Getting Here
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black text-[#162544] tracking-tight">
+            130 Inkerman Street West
+          </h2>
+          <p class="text-base text-slate-600 leading-relaxed">
+            Conveniently situated in downtown Listowel. Easy walking distance to Main Street, banking, and shopping.
+          </p>
+
+          <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3 text-sm">
+            <div>
+              <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block">Address</span>
+              <p class="font-black text-[#162544] text-lg">130 Inkerman St W, Listowel, ON N4W 1B7</p>
+            </div>
+            <div class="pt-2 border-t border-slate-100">
+              <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block">Local Landmarks</span>
+              <p class="text-slate-700">Directly across from RBC Royal Bank • Near Shoppers Drug Mart</p>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-slate-700 font-bold">Parking:</span>
+              <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-0.5 rounded">Free Street Parking Out Front</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="https://maps.google.com/?q=First+Cut+Barber+Shop+130+Inkerman+St+W+Listowel+ON" target="_blank" class="bg-[#162544] hover:bg-[#203560] text-white font-black px-6 py-3.5 rounded-xl shadow transition flex items-center gap-2 text-sm">
+              <span>🗺️ Open in Google Maps</span>
+            </a>
+            <a href="tel:5195809713" class="bg-[#B22222] hover:bg-[#8b1818] text-white font-black px-6 py-3.5 rounded-xl shadow transition flex items-center gap-2 text-sm">
+              <span>📞 Call Rick</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Map Embed -->
+        <div class="lg:col-span-7">
+          <div class="bg-white rounded-3xl border-4 border-[#162544] overflow-hidden shadow-2xl">
+            <div class="bg-[#162544] text-white px-5 py-3 flex items-center justify-between border-b border-[#B22222]">
+              <span class="font-bold text-xs uppercase tracking-wider text-white">Interactive Downtown Map</span>
+              <span class="text-xs text-slate-300">Listowel, North Perth</span>
+            </div>
+            <div class="relative h-80 sm:h-96 w-full bg-slate-200">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                loading="lazy" 
+                allowfullscreen 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-80.9575%2C43.7300%2C-80.9480%2C43.7355&amp;layer=mapnik&amp;marker=43.7325774%2C-80.952798">
+              </iframe>
+              <div class="absolute bottom-4 left-4 bg-[#162544]/95 text-white p-3.5 rounded-xl border border-white/20 shadow-xl text-xs backdrop-blur">
+                <span class="font-black text-white block text-sm">First Cut Barber Shop</span>
+                <span class="text-slate-300">130 Inkerman St West • (519) 580-9713</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MID-PAGE BARBER STRIPE ACCENT -->
+  <div class="h-3 barber-pole-ribbon-md w-full shadow-inner"></div>
+
+  <!-- REVIEWS & WORD-OF-MOUTH -->
+  <section id="reviews" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-4 mb-14">
+        <div class="inline-flex items-center gap-1.5 bg-red-50 text-red-900 border border-red-200 font-black text-xs px-4 py-1.5 rounded-full uppercase tracking-wider">
+          <span>★ ★ ★ ★ ★</span>
+          <span>4.5 Verified Community Rating</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-[#162544] tracking-tight">
+          Trusted by Listowel Locals
+        </h2>
+        <p class="text-base text-slate-600">
+          A few words from the people who keep their hair trimmed in Rick's chair.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-slate-50 p-7 rounded-3xl border-2 border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="text-[#B22222] text-sm tracking-widest">★★★★★</div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "Great low-key, old school barber shop. Fast, friendly and pretty inexpensive compared to any other place in the area. Rick does a solid job every time."
+            </p>
+          </div>
+          <div class="border-t border-slate-200 pt-3 flex items-center justify-between text-xs font-bold text-slate-500">
+            <span class="text-[#162544]">Local Resident</span>
+            <span>Verified Customer</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-7 rounded-3xl border-2 border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="text-[#B22222] text-sm tracking-widest">★★★★★</div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "Walk-in friendly is the biggest selling point. You don't have to schedule an appointment two weeks ahead of time when your hair gets long. In and out in 15 minutes."
+            </p>
+          </div>
+          <div class="border-t border-slate-200 pt-3 flex items-center justify-between text-xs font-bold text-slate-500">
+            <span class="text-[#162544]">North Perth Client</span>
+            <span>Verified Customer</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-7 rounded-3xl border-2 border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="text-[#B22222] text-sm tracking-widest">★★★★★</div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "Brought my son here for his school haircut. Quick, patient, and done without any fuss. Great small-town atmosphere and fair pricing."
+            </p>
+          </div>
+          <div class="border-t border-slate-200 pt-3 flex items-center justify-between text-xs font-bold text-slate-500">
+            <span class="text-[#162544]">Local Parent</span>
+            <span>Verified Customer</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM SIGNATURE BARBER STRIPE -->
+  <div class="h-4 barber-pole-ribbon-lg w-full"></div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0c1527] text-slate-300 py-12 text-sm border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
+        
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded border-2 border-white overflow-hidden bg-white p-0.5">
+              <img src="assets/logo_banner.jpg" class="w-full h-full object-cover" alt="First Cut">
+            </div>
+            <span class="text-xl font-black text-white tracking-wider">FIRST CUT BARBER SHOP</span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Traditional barbering for Listowel and North Perth. Classic clipper work, beard grooming, and friendly community conversation at 130 Inkerman St West.
+          </p>
+          <p class="text-xs text-red-300 font-semibold">
+            🐾 "Dogs Welcome, People Tolerated"
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#services" class="hover:text-white transition">Services & Rates</a></li>
+            <li><a href="#schedule" class="hover:text-white transition">Operating Hours</a></li>
+            <li><a href="#about" class="hover:text-white transition">About Rick</a></li>
+            <li><a href="#location" class="hover:text-white transition">Map & Directions</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider">Contact & Address</h4>
+          <div class="text-xs space-y-1.5 text-slate-400">
+            <p class="text-white font-bold">130 Inkerman St West</p>
+            <p>Listowel, ON N4W 1B7</p>
+            <p class="pt-2">
+              <a href="tel:5195809713" class="text-white font-black hover:underline text-sm block">📞 (519) 580-9713</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 First Cut Barber Shop. All rights reserved.</p>
+        <p>Built for Listowel & North Perth Community</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CALL/DIRECTIONS BAR -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 bg-[#0c1527]/95 backdrop-blur border-t border-slate-800 p-3 z-50 flex items-center justify-between gap-3 shadow-2xl">
+    <a href="tel:5195809713" class="flex-1 bg-white hover:bg-slate-100 text-[#162544] font-black py-3 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 shadow border border-slate-300">
+      <span>📞</span>
+      <span>Call Rick</span>
+    </a>
+    <a href="https://maps.google.com/?q=First+Cut+Barber+Shop+130+Inkerman+St+W+Listowel+ON" target="_blank" class="flex-1 bg-[#B22222] hover:bg-[#8b1818] text-white font-black py-3 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 shadow">
+      <span>📍</span>
+      <span>Get Directions</span>
+    </a>
+  </div>
+
+  <!-- JAVASCRIPT: REAL-TIME HOURS TRACKER -->
+  <script>
+    function updateLiveShopStatus() {
+      const now = new Date();
+      const day = now.getDay();
+      const hour = now.getHours();
+      const mins = now.getMinutes();
+      const timeVal = hour + (mins / 60);
+
+      const statusText = document.getElementById('status-live-text');
+      const dot = document.getElementById('status-pulse-dot');
+
+      const rows = {
+        0: 'sched-sun',
+        1: 'sched-mon',
+        2: 'sched-tue',
+        3: 'sched-wed',
+        4: 'sched-thu',
+        5: 'sched-fri',
+        6: 'sched-sat'
+      };
+      
+      const todayRow = document.getElementById(rows[day]);
+      if (todayRow) {
+        todayRow.classList.add('bg-emerald-50', 'border-l-4', 'border-emerald-500', 'px-2');
+      }
+
+      // Tuesday to Friday: 9am to 5pm
+      if (day >= 2 && day <= 5) {
+        if (timeVal >= 9.0 && timeVal < 17.0) {
+          statusText.innerText = 'OPEN RIGHT NOW (Walk-Ins Welcome Until 5:00 PM)';
+          statusText.className = 'font-bold text-emerald-400';
+          dot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping';
+        } else if (timeVal < 9.0) {
+          statusText.innerText = 'OPENS TODAY AT 9:00 AM • Walk-Ins Welcome';
+          statusText.className = 'font-bold text-amber-400';
+          dot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
+        } else {
+          statusText.innerText = 'CLOSED FOR THE DAY • Reopens Tomorrow at 9:00 AM';
+          statusText.className = 'font-bold text-slate-400';
+          dot.className = 'w-2.5 h-2.5 rounded-full bg-slate-500';
+        }
+      } 
+      // Saturday: 9am to 1pm
+      else if (day === 6) {
+        if (timeVal >= 9.0 && timeVal < 13.0) {
+          statusText.innerText = 'OPEN NOW (Saturday Hours Until 1:00 PM)';
+          statusText.className = 'font-bold text-emerald-400';
+          dot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping';
+        } else if (timeVal < 9.0) {
+          statusText.innerText = 'OPENS TODAY AT 9:00 AM (Saturday Hours)';
+          statusText.className = 'font-bold text-amber-400';
+          dot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
+        } else {
+          statusText.innerText = 'CLOSED FOR THE WEEKEND • Reopens Tuesday at 9:00 AM';
+          statusText.className = 'font-bold text-slate-400';
+          dot.className = 'w-2.5 h-2.5 rounded-full bg-slate-500';
+        }
+      } 
+      // Sunday & Monday: Closed
+      else {
+        statusText.innerText = 'CLOSED TODAY • Reopens Tuesday at 9:00 AM';
+        statusText.className = 'font-bold text-amber-400';
+        dot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
+      }
+    }
+
+    updateLiveShopStatus();
+    setInterval(updateLiveShopStatus, 60000);
+  </script>
+</body>
+</html>
